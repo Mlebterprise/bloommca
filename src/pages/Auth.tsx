@@ -47,9 +47,9 @@ export const Auth: React.FC = () => {
         if (!result.error) {
           toast({
             title: "Welcome to Bloom! 🌸",
-            description: "Please check your email to verify your account.",
+            description: "Your account has been created successfully!",
           });
-          setIsSignUp(false);
+          navigate('/');
         }
       } else {
         result = await signIn(formData.email, formData.password);
@@ -69,8 +69,6 @@ export const Auth: React.FC = () => {
           errorMessage = "Invalid email or password. Please check your credentials.";
         } else if (result.error.message.includes("User already registered")) {
           errorMessage = "This email is already registered. Try signing in instead.";
-        } else if (result.error.message.includes("Email not confirmed")) {
-          errorMessage = "Please check your email and click the verification link.";
         }
 
         toast({

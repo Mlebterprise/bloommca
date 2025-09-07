@@ -10,6 +10,36 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/auth"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/wheel"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/journal"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/ai-coaching"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/schedule"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/settings"
+  to = "/index.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
